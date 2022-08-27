@@ -9,24 +9,29 @@
 <form action="#" th:action="@{/registration}" th:object="${userForm}" method="post">
    <table>
       <tr>
+         <td th:if="${usernameError}">Пользователь с таким именем уже существует</td>
+      </tr>
+      <tr>
          <td>User name:</td>
-         <td><input type="text" th:field="*{username}" /></td>
-         <td th:if="${#fields.hasErrors('username')}" th:errors="*{username}">Name Error</td>
+         <td><input type="text" th:field="*{username}" placeholder="Login"/></td>
       </tr>
       <tr>
          <td>Password:</td>
-         <td><input type="password" th:field="*{password}" /></td>
-         <td th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Password Error</td>
+         <td><input type="password" th:field="*{password}" placeholder="Password" /></td>
       </tr>
       <tr>
          <td>Confirm password:</td>
-         <td><input type="password" th:field="*{passwordConfirm}" /></td>
-         <td th:if="${#fields.hasErrors('passwordConfirm')}" th:errors="*{passwordConfirm}">passwordConfirm Error</td>
+         <td><input type="password" th:field="*{passwordConfirm}" placeholder="Confirm your password" /></td>
+      </tr>
+      <tr>
+         <td th:if="${passwordConfirmError}">Пароли не совпадают</td>
+         <td th:if="${passwordError}">Пароль должен быть больше 4 символов</td>
       </tr>
       <tr>
          <td><button type="submit">Submit</button></td>
       </tr>
    </table>
 </form>
+<div><p>Click <a th:href="@{/login}">here</a> to login.</p></div>
 </body>
 </html>
