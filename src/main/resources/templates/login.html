@@ -4,27 +4,20 @@
 <head>
     <meta charset="utf-8">
     <title>Log in</title>
-    <link href="../static/css/WebWallet.css" rel="stylesheet">
-    <link href="../static/css/main.css" rel="stylesheet">
 </head>
 <body>
 <div id="PageHeader1" >
-    <div id="nav-btn"> <input type="submit" id="Button1" onclick=href="@{/index}" name="" value="WebWallet" ></div>
-    <div id="wb_Text2">
-        <span>Web application for you finance</span></div>
+    <span>Web application for you finance</span></div>
 </div>
 <div th:if="${param.error}">
     Invalid username and password.
 </div>
-<div th:if="${param.logout}">
-    You have been logged out.
-</div>
 <form th:action="@{/login}" method="post">
-    <div><label> User Name : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><input type="submit" value="Sign In"/></div>
+    <div><label> User Name : <input type="text" name="username" placeholder="Username" autofocus="true"/> </label></div>
+    <div><label> Password: <input type="password" name="password" placeholder="Password"/> </label></div>
+    <div><label>Remember Me? <input type="checkbox" name="remember-me"></label></div>
+    <div><input type="submit" value="Log In"/></div>
 </form>
-<div id="PageFooter1" style="position:absolute;overflow:hidden;text-align:left;left:0px;top:900px;width:100%;height:100px;z-index:7;">
 </div>
 </body>
 </html>

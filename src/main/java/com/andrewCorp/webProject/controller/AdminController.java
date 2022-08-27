@@ -1,16 +1,17 @@
 package com.andrewCorp.webProject.controller;
 
+import com.andrewCorp.webProject.entity.User;
 import com.andrewCorp.webProject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.security.Principal;
 
 @Controller
 public class AdminController {
@@ -21,7 +22,12 @@ public class AdminController {
     private UserService userService;
 
     @GetMapping("/admin")
-    public String userList(Model model) {
+    public String userList(Model model, Principal principal) {
+
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+
+        String userInfo = loginedUser.getUsername();
+        model.addAttribute("userInfo", userInfo);
         model.addAttribute("allUsers", userService.allUsers());
         return "admin";
     }
@@ -41,5 +47,23 @@ public class AdminController {
     public String  gtUser(@PathVariable("userId") Long userId, Model model) {
         model.addAttribute("allUsers", userService.usergtList(userId));
         return "admin";
+    }
+
+    @RequestMapping(value = "/403", method = RequestMethod.GET)
+    public String accessDenied(Model model, Principal principal) {
+
+        if (principal != null) {
+            User loginedUser = (User) ((Authentication) principal).getPrincipal();
+
+            String userInfo = loginedUser.getUsername();
+
+            model.addAttribute("userInfo", userInfo);
+
+            String message = "Hi " + principal.getName() //
+                    + "<br> You do not have permission to access this page!";
+            model.addAttribute("message", message);
+
+        }
+        return "403Page";
     }
 }

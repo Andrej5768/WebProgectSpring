@@ -36,8 +36,15 @@ public class RegistrationController {
         if (bindingResult.hasErrors()) {
             return "registration";
         }
+
+        if (userForm.getPassword().length() < 4){
+            model.addAttribute("passwordError", "Пароль должен быть больше 4 символов");
+            LOGGER.info("Пароль должен быть больше 4 символов");
+            return "registration";
+        }
+
         if (!userForm.getPassword().equals(userForm.getPasswordConfirm())){
-            model.addAttribute("passwordError", "Пароли не совпадают");
+            model.addAttribute("passwordConfirmError", "Пароли не совпадают");
             LOGGER.info("Пароли не совпадают");
             return "registration";
         }

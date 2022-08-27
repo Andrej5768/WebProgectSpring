@@ -4,35 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7396a220-deb5-49f4-812e-b9682070002a" name="Changes" comment="dont work">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/controller/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/service/SecurityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/wallet.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7396a220-deb5-49f4-812e-b9682070002a" name="Changes" comment="add jsp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/config/MvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/controller/GreetingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/controller/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/controller/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/domain/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/domain/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/domain/Wallet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/service/UserValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/andrewCorp/webProject/service/WebUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/admin.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/registration.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/jsp/wallet.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/parts/common.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/parts/login.ftlh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/registration.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/userEdit.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/userList.ftl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/wallet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +47,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Beck" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,35 +86,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/java_projects/WebProgectSpring/src/main",
-    "spring.configuration.checksum": "339d4d95b6a0af03fa7dbb59c4ab92c1"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/java_projects/WebProgectSpring/src/main/webapp/html&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;339d4d95b6a0af03fa7dbb59c4ab92c1&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\java_projects\WebProgectSpring\src\main\webapp\html" />
+      <recent name="C:\java_projects\WebProgectSpring\src\main\resources\templates" />
+      <recent name="C:\java_projects\WebProgectSpring\src\main\resources\static" />
       <recent name="C:\java_projects\WebProgectSpring\src\main" />
       <recent name="C:\java_projects\WebProgectSpring\src\main\resources" />
-      <recent name="C:\java_projects\WebProgectSpring\src\main\java\com\andrewCorp\webProject" />
-      <recent name="C:\java_projects\WebProgectSpring\src\main\resources\templates" />
-      <recent name="C:\java_projects\WebProgectSpring\src\main\resources\templates\parts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\java_projects\WebProgectSpring\src\main\resources\static" />
+      <recent name="C:\java_projects\WebProgectSpring\src\main\resources\templates" />
+      <recent name="C:\java_projects\WebProgectSpring\src\main\webapp\html" />
       <recent name="C:\java_projects\WebProgectSpring\src\main\resources\templates\css" />
     </key>
   </component>
@@ -140,6 +139,7 @@
         <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Spring Boot.Application" />
         <item itemvalue="Spring Boot.Application" />
+        <item itemvalue="Spring Boot.Application" />
       </list>
     </recent_temporary>
   </component>
@@ -156,8 +156,16 @@
       <workItem from="1661522784579" duration="3941000" />
       <workItem from="1661526925277" duration="1226000" />
       <workItem from="1661589103684" duration="980000" />
-      <workItem from="1661607502038" duration="2272000" />
+      <workItem from="1661607502038" duration="10103000" />
     </task>
+    <task id="LOCAL-00001" summary="add jsp">
+      <created>1661609823743</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661609823743</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,5 +181,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="add jsp" />
   </component>
 </project>
