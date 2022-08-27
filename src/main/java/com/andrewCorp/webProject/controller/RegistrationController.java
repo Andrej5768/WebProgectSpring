@@ -1,35 +1,52 @@
 package com.andrewCorp.webProject.controller;
 
-import com.andrewCorp.webProject.domain.User;
-import com.andrewCorp.webProject.repository.UserRepository;
+import com.andrewCorp.webProject.entity.User;
+import com.andrewCorp.webProject.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import java.util.Map;
+import javax.validation.Valid;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Controller
 public class RegistrationController {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(RegistrationController.class);
+
     @Autowired
-    private UserRepository userRepository;
+    private UserService userService;
 
     @GetMapping("/registration")
-    public String registration() {
+    public String registration(Model model) {
+        model.addAttribute("userForm", new User());
+
         return "registration";
     }
 
     @PostMapping("/registration")
-    public String addUser(User user, Map<String, Object> model) {
-        User userFromDb = userRepository.findByUsername(user.getUsername());
+    public String addUser(@ModelAttribute("userForm") @Valid User userForm, BindingResult bindingResult, Model model) {
 
-        if (userFromDb != null) {
-            model.put("message", "User exists!");
+        if (bindingResult.hasErrors()) {
+            return "registration";
+        }
+        if (!userForm.getPassword().equals(userForm.getPasswordConfirm())){
+            model.addAttribute("passwordError", "Пароли не совпадают");
+            LOGGER.info("Пароли не совпадают");
+            return "registration";
+        }
+        if (!userService.saveUser(userForm)){
+            model.addAttribute("usernameError", "Пользователь с таким именем уже существует");
+            LOGGER.info("Пользователь с таким именем уже существует");
             return "registration";
         }
 
-        userRepository.save(user);
-
-        return "redirect:/login";
+        return "redirect:/";
     }
 }
