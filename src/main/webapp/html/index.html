@@ -4,6 +4,9 @@
     <title>Main</title>
 </head>
 <body>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 <div><p>Click <a th:href="@{/login}">here</a> to login.</p></div>
 <div><p>Click <a th:href="@{/registration}">here</a> to registration.</p></div>
 </body>

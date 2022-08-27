@@ -9,6 +9,10 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.rememberme.InMemoryTokenRepositoryImpl;
+import org.springframework.security.web.authentication.rememberme.PersistentTokenRepository;
+
+import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
@@ -41,16 +45,30 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin()
                 .loginPage("/login")
                 //Перенарпавление на главную страницу после успешного входа
-                .defaultSuccessUrl("/")
+                .defaultSuccessUrl("/wallet")
                 .permitAll()
                 .and()
                 .logout()
                 .permitAll()
                 .logoutSuccessUrl("/");
+        // Config Remember Me.
+        httpSecurity.authorizeRequests().and() //
+                .rememberMe().tokenRepository(this.persistentTokenRepository()) //
+                .tokenValiditySeconds(1 * 24 * 60 * 60); // 24h
+        // When the user has logged in as XX.
+        // But access a page that requires role YY,
+        // AccessDeniedException will be thrown.
+        httpSecurity.authorizeRequests().and().exceptionHandling().accessDeniedPage("/403");
     }
 
     @Autowired
     protected void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userService).passwordEncoder(bCryptPasswordEncoder());
+    }
+
+    @Bean
+    public PersistentTokenRepository persistentTokenRepository() {
+        InMemoryTokenRepositoryImpl memory = new InMemoryTokenRepositoryImpl();
+        return memory;
     }
 }
