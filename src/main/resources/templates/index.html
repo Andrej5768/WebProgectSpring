@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<link rel="stylesheet" type="text/css" media="all" href="/css/main.css" th:href="@{/css/main.css}" />
+<head>
+    <title>Main</title>
+</head>
+<body>
+<div id="PageHeader1" >
+    <div id="nav-btn"> <input type="submit" id="Button1" onclick=href="@{/main}" name="" value="WebWallet" ></div>
+    <div id="wb_Text2">
+        <span>Web application for you finance</span></div>
+</div>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+<div><p>Click <a th:href="@{/login}">here</a> to login.</p></div>
+<div><p>Click <a th:href="@{/registration}">here</a> to registration.</p></div>
+</body>
+</html>
