@@ -18,11 +18,11 @@
     </parent>
 
     <properties>
-        <postgresql.version>42.2.8</postgresql.version>
+        <postgresql.version>42.2.25</postgresql.version>
         <jstl.version>1.2</jstl.version>
         <tomcat-embed-jasper.version>9.0.27</tomcat-embed-jasper.version>
         <spring-security-taglibs.version>5.2.0.RELEASE</spring-security-taglibs.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <logback.version>1.2.13</logback.version>
         <slf4j.version>1.7.26</slf4j.version>
         <maven.compiler.source>8</maven.compiler.source>
